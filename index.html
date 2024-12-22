@@ -1,127 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Bean Interactive Face</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reeker - Professional Resume & Gaming Portfolio</title>
     <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #162447);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff8c00;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        header {
             text-align: center;
-            background-color: #f0f0f0;
+            padding-bottom: 50px;
         }
 
-        #mrBean {
-            position: relative;
-            max-width: 100%;
-            height: auto;
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
 
-        .interactive-area {
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.5); /* Invisible overlay for clickable areas */
-            cursor: pointer;
+        header h2 {
+            font-size: 1.5rem;
+            color: #ff8c00;
         }
 
-        #nose {
-            width: 30px;
-            height: 40px;
-            top: 150px;
-            left: 150px;
+        header p {
+            font-size: 1rem;
+            color: #ddd;
         }
 
-        #left-eye, #right-eye {
-            width: 30px;
-            height: 30px;
-            top: 120px;
+        /* Resume Sections */
+        .section {
+            margin-bottom: 60px;
         }
 
-        #left-eye {
-            left: 120px;
+        .section h3 {
+            font-size: 2rem;
+            color: #ff8c00;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        #right-eye {
-            left: 180px;
+        .section ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
 
-        #left-ear, #right-ear {
-            width: 40px;
-            height: 50px;
-            top: 100px;
+        .section ul li {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
         }
 
-        #left-ear {
-            left: 60px;
+        .section ul li span {
+            color: #ff8c00;
         }
 
-        #right-ear {
-            left: 220px;
+        /* Experience / Education / Skills */
+        .exp-item, .edu-item, .skill-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
         }
 
-        #mouth {
-            width: 60px;
-            height: 30px;
-            top: 190px;
-            left: 135px;
+        .exp-item h4, .edu-item h4, .skill-item h4 {
+            color: #ff8c00;
         }
 
-        #randomText {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 20px;
+        .exp-item p, .edu-item p, .skill-item p {
+            color: #ddd;
+            font-size: 1rem;
+        }
+
+        /* Links Section */
+        .links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .links a {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            background-color: #ff8c00;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .links a:hover {
+            background-color: #ff5800;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #ddd;
         }
     </style>
 </head>
+
 <body>
 
-<h1>Mr. Bean's Teddy Face - Click on His Features</h1>
-<img src="https://media.tenor.com/18qMBVHAI7wAAAAM/yeahh.gif" alt="Mr. Bean's Face" id="mrBean">
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Reeker</h1>
+            <h2>Professional Gamer & Web Developer</h2>
+            <p>Welcome to my professional portfolio. I specialize in gaming, game development, and building interactive web applications.</p>
+        </header>
 
-<!-- Define the clickable areas -->
-<div id="nose" class="interactive-area" onclick="generateRandom('nose')"></div>
-<div id="left-eye" class="interactive-area" onclick="generateRandom('left-eye')"></div>
-<div id="right-eye" class="interactive-area" onclick="generateRandom('right-eye')"></div>
-<div id="left-ear" class="interactive-area" onclick="generateRandom('left-ear')"></div>
-<div id="right-ear" class="interactive-area" onclick="generateRandom('right-ear')"></div>
-<div id="mouth" class="interactive-area" onclick="generateRandom('mouth')"></div>
+        <!-- Experience Section -->
+        <div class="section">
+            <h3>Experience</h3>
+            <ul>
+                <li class="exp-item">
+                    <div>
+                        <h4>Senior Game Developer</h4>
+                        <p>XYZ Gaming Studio | Jan 2020 - Present</p>
+                    </div>
+                    <div>
+                        <p>Developed cutting-edge gameplay features for AAA titles, including character design and mechanics for multiplayer modes in projects like "Rust" and "Zelda: Tears of the Kingdom".</p>
+                    </div>
+                </li>
+                <li class="exp-item">
+                    <div>
+                        <h4>Freelance Web Developer</h4>
+                        <p>Self-Employed | Aug 2018 - Jan 2020</p>
+                    </div>
+                    <div>
+                        <p>Designed and developed responsive websites and web applications, ensuring high-quality user experiences for clients in various sectors.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-<!-- Display random results -->
-<div id="randomText"></div>
+        <!-- Education Section -->
+        <div class="section">
+            <h3>Education</h3>
+            <ul>
+                <li class="edu-item">
+                    <div>
+                        <h4>Bachelor of Computer Science</h4>
+                        <p>University of Prague | 2016 - 2020</p>
+                    </div>
+                    <div>
+                        <p>Focused on web development, game design, and software engineering with a special interest in gaming systems.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-<script>
-// Function to generate random letters, numbers, symbols, or words
-function generateRandom(area) {
-    let randomResult;
-    
-    const randomNumber = Math.floor(Math.random() * 10);
-    const randomLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26)); // A-Z
-    const randomSymbol = String.fromCharCode(33 + Math.floor(Math.random() * 15)); // Special symbols
-    const randomWords = ['hello', 'world', 'java', 'python', 'javascript', 'coding'];
+        <!-- Skills Section -->
+        <div class="section">
+            <h3>Skills</h3>
+            <ul>
+                <li class="skill-item">
+                    <div>
+                        <h4>Web Development</h4>
+                    </div>
+                    <div>
+                        <p>HTML, CSS, JavaScript, React, Node.js</p>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div>
+                        <h4>Game Development</h4>
+                    </div>
+                    <div>
+                        <p>Unity, Unreal Engine, C#, JavaScript</p>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div>
+                        <h4>Game Design & Mechanics</h4>
+                    </div>
+                    <div>
+                        <p>Level Design, Multiplayer Systems, AI Mechanics, Prototyping</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-    switch (area) {
-        case 'nose':
-            randomResult = randomNumber;
-            break;
-        case 'left-eye':
-        case 'right-eye':
-            randomResult = randomLetter;
-            break;
-        case 'left-ear':
-        case 'right-ear':
-            randomResult = randomSymbol;
-            break;
-        case 'mouth':
-            randomResult = randomWords[Math.floor(Math.random() * randomWords.length)];
-            break;
-        default:
-            randomResult = 'Something went wrong!';
-            break;
-    }
+        <!-- Links Section -->
+        <div class="links">
+            <a href="https://steamcommunity.com/id/Reeker23/" target="_blank">Visit My Steam Profile</a>
+        </div>
 
-    // Display the random result
-    document.getElementById('randomText').textContent = `Random from ${area}: ${randomResult}`;
-}
-</script>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Reeker. All Rights Reserved.</p>
+        </footer>
+    </div>
 
 </body>
+
 </html>
